@@ -869,7 +869,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.887
+      value: 0.836
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -16650,7 +16650,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8e8b2d8fb9d44fb4ca351ac08a475423, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2682e811bf7616844bb0622456725789, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16791,7 +16791,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d338b1fa238ffc48987b9372b9f7f2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61041da169b877b4b8bd5893cbcac5ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16851,11 +16851,11 @@ MonoBehaviour:
   active: 1
   visible: 1
   swipeOut: 1
-  normalSprite: {fileID: 21300000, guid: 5d338b1fa238ffc48987b9372b9f7f2f, type: 3}
-  pressedSprite: {fileID: 21300000, guid: 5d338b1fa238ffc48987b9372b9f7f2f, type: 3}
+  normalSprite: {fileID: 21300000, guid: 61041da169b877b4b8bd5893cbcac5ba, type: 3}
+  pressedSprite: {fileID: 21300000, guid: 61041da169b877b4b8bd5893cbcac5ba, type: 3}
   pressedColor:
     serializedVersion: 2
-    rgba: 2516642047
+    rgba: 2516584703
 --- !u!1 &3308325050215279441
 GameObject:
   m_ObjectHideFlags: 0
@@ -16923,7 +16923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6480742704f9efe4289fadb894aa184d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92814d009aa83ea44b015de7c7f6a825, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16986,7 +16986,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -526, y: 175}
+  m_AnchoredPosition: {x: -445, y: 175}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3308325050442046188
@@ -17020,11 +17020,11 @@ MonoBehaviour:
   active: 1
   visible: 1
   swipeOut: 1
-  normalSprite: {fileID: 21300000, guid: 4d6097d6fc5de6f44b23ac90c6228e55, type: 3}
-  pressedSprite: {fileID: 21300000, guid: 4d6097d6fc5de6f44b23ac90c6228e55, type: 3}
+  normalSprite: {fileID: 21300000, guid: ab23829e2e31184489f1859d6249cc45, type: 3}
+  pressedSprite: {fileID: 21300000, guid: ab23829e2e31184489f1859d6249cc45, type: 3}
   pressedColor:
     serializedVersion: 2
-    rgba: 2516642047
+    rgba: 2516584447
 --- !u!114 &3308325050442046191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17045,7 +17045,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d6097d6fc5de6f44b23ac90c6228e55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab23829e2e31184489f1859d6249cc45, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
