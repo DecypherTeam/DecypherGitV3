@@ -16,7 +16,7 @@ namespace Examples
         Animator animator;
 
         // Variable for the script, GrowingCrop.cs
-        GrowingCrop growingCrop;
+        GrowingCrop1 growingCrop;
         // Variable for the script, Player.cs
         Player player;
 
@@ -35,8 +35,8 @@ namespace Examples
             rb = GetComponent<Rigidbody>();
 
             // Reference to the script that holds the crops which is GrowingCrop.cs
-            GameObject theCrop = GameObject.Find("Crops");
-            growingCrop = theCrop.GetComponent<GrowingCrop>();
+            GameObject theCrop = GameObject.Find("Crops 1");
+            growingCrop = theCrop.GetComponent<GrowingCrop1>();
 
             // Reference to the script that holds the player which is Player.cs
             GameObject thePlayer = GameObject.Find("Player");
