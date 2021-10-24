@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Red chilies plant
   thumbnail: {fileID: 0}
-  gameModel: {fileID: 0}
+  gameModel: {fileID: 7259521487861202208, guid: 51e0be1faa37b1b40bbcd535d292ee86,
+    type: 3}

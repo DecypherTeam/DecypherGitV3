@@ -37,10 +37,6 @@ namespace Examples
             // Reference to the script that holds the crops which is GrowingCrop.cs
             GameObject theCrop = GameObject.Find("Crops 1");
             growingCrop = theCrop.GetComponent<GrowingCrop1>();
-
-            // Reference to the script that holds the player which is Player.cs
-            GameObject thePlayer = GameObject.Find("Player");
-            player = thePlayer.GetComponent<Player>();
         }
 
         private void Update()
@@ -63,13 +59,6 @@ namespace Examples
                 animator.SetBool("isRunning", false);
                 /*Debug.Log("Crop destroyed");*/
             }
-
-            // Trying to create bullet making contact with enemy and enemy die
-            /*float bulletdist = Vector3.Distance(transform.position, player.game.transform.position);
-            if (bulletdist < stoppingDistance)
-            {
-                Debug.Log("Bullet hit");
-            }*/
         }
 
         private void GoToTarget()
