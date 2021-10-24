@@ -22,9 +22,6 @@ namespace Examples
         public GameObject sumpit;
 
         public Transform pickUpDest;
-        public Rigidbody pickItem;
-        public bool pickedItem;
-
 
         // List of variable for all chickens [START]
         public Rigidbody pickChic;
@@ -43,11 +40,7 @@ namespace Examples
 
         Animator animator;
 
-        PlantInteraction plantInteraction;
-
-        GrowingCrop growingCrop;
-
-        SeedCollider chillieSeedCollider;
+        SeedCollider seedCollider;
 
         // Awake
         void Awake()
@@ -55,31 +48,19 @@ namespace Examples
             myTransform = transform;
             cameraTransform = Camera.main.transform;
             controller = GetComponent<CharacterController>();
-
-            /*secondCamera.transform.position = new Vector3(0.5f, 3.4f, transform.position.z);*/
         }
 
         void Start()
         {
             animator = GetComponent<Animator>();
 
-            GameObject theSeed = GameObject.Find("Seed Bag");
-            plantInteraction = theSeed.GetComponent<PlantInteraction>();
-
-            GameObject theCrop = GameObject.Find("Crops");
-            growingCrop = theCrop.GetComponent<GrowingCrop>();
-
-            GameObject seedBag = GameObject.Find("Chillie Seed Bag");
-            chillieSeedCollider = seedBag.GetComponent<SeedCollider>();
-
+            GameObject seedcollider = GameObject.Find("Chillie Collider");
+            seedCollider = seedcollider.GetComponent<SeedCollider>();
         }
 
         // Update
         void Update()
         {
-            // Setting the crosshair to false for default
-            //crosshair.gameObject.SetActive(false);
-
             // Setting up the shooting mechanics
             if ( weapReady == false )
             {
@@ -94,21 +75,12 @@ namespace Examples
             // Assigning the pick up mechanics to the pick up button
             if( TCKInput.GetAction( "pickBtn", EActionEvent.Press))
             {   
-                /*if(growingCrop.harvestReadyToPick == true && growingCrop.playerHit == true)
+                // List of calling pick seed bags functions 
+                if(seedCollider.playerTouchSeed == true)
                 {
-                    growingCrop.PlayerPickCrop();
+                    Debug.Log("Player touch seed bag");
+                    seedCollider.PickUp();
                     animator.SetBool("isPickup", true);
-                }*/
-               
-                /*if (pickedItem == false)
-                {
-                    PickUp();
-                    animator.SetBool("isPickup", true);
-                }*/
-
-                if (chillieSeedCollider.playerTouchSeed == true)
-                {
-                    chillieSeedCollider.PickUp();
                 }
 
                 // List of calling pick chicken up functions [START]
@@ -151,17 +123,7 @@ namespace Examples
             // Assigning the item to drop when the button is not pressed
             if (TCKInput.GetAction("pickBtn", EActionEvent.Up))
             {
-                /*if (growingCrop.cropPickedUp == true)
-                {
-                    growingCrop.PlayerDropCrop();
-                    animator.SetBool("isPickup", false);
-                }
-
-                if (plantInteraction.isDestroyed != true)
-                {
-                    PickDown();
-                    animator.SetBool("isPickup", false);
-                }*/
+                seedCollider.PickDown();
 
                 // List of calling pick chicken down functions
                 PickChicDown();
@@ -194,8 +156,6 @@ namespace Examples
         // FixedUpdate
         void FixedUpdate()
         {
-            pickedItem = true;
-
             // List of booleans for picking chickens
             pickedChic = true;
             pickedChicSec = true;
@@ -315,25 +275,12 @@ namespace Examples
 
         private void PickUp()
         {
-            // Coding the pickable items to be carried
-            pickItem.useGravity = false;
-            pickItem.transform.position = pickUpDest.position;
-            pickItem.transform.parent = GameObject.Find("PickUpDestination").transform;
-            pickItem.constraints = RigidbodyConstraints.FreezeAll;
+            
         }
 
         private void PickDown()
         {
-            //Debug.Log("Player drop item");
-            pickItem.constraints = RigidbodyConstraints.None;
-            pickItem.transform.parent = null;
-            pickItem.useGravity = true;
-            pickedItem = true;
-
-            if (plantInteraction.isDestroyed == true)
-            {
-                pickItem = null;
-            }
+            
         }
 
 

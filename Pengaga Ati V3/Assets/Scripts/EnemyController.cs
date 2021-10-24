@@ -16,7 +16,7 @@ namespace Examples
         Animator animator;
 
         // Variable for the script, GrowingCrop.cs
-        GrowingCrop growingCrop;
+        /*GrowingCrop growingCrop;*/
         // Variable for the script, Player.cs
         Player player;
 
@@ -35,8 +35,8 @@ namespace Examples
             rb = GetComponent<Rigidbody>();
 
             // Reference to the script that holds the crops which is GrowingCrop.cs
-            GameObject theCrop = GameObject.Find("Crops");
-            growingCrop = theCrop.GetComponent<GrowingCrop>();
+            /*GameObject theCrop = GameObject.Find("Crops");
+            growingCrop = theCrop.GetComponent<GrowingCrop>();*/
         }
 
         private void Update()
@@ -46,14 +46,14 @@ namespace Examples
             {
                 StopEnemy();
                 animator.SetBool("isEating", true);
-                StartCoroutine(growingCrop.WaitBeforeDestroy());
+                /*StartCoroutine(growingCrop.WaitBeforeDestroy());*/
             }
             else
             {
-                GoToTarget();
+                /*GoToTarget();*/
             }
 
-            if (growingCrop.cropDestroyed == true)
+            //if (growingCrop.cropDestroyed == true)
             {
                 animator.SetBool("isEating", false);
                 animator.SetBool("isRunning", false);
@@ -61,7 +61,7 @@ namespace Examples
             }
         }
 
-        private void GoToTarget()
+        /*private void GoToTarget()
         {
             if(growingCrop.harvestReady == true)
             {
@@ -69,7 +69,7 @@ namespace Examples
                 agent.SetDestination(target.transform.position);
                 animator.SetBool("isRunning", true);
             }  
-        }
+        }*/
 
         private void StopEnemy()
         {

@@ -33,7 +33,13 @@ namespace Examples
             chillieSeedBag.useGravity = false;
             chillieSeedBag.transform.position = pickUpDest.position;
             chillieSeedBag.transform.parent = GameObject.Find("PickUpDestination").transform;
-            chillieSeedBag.constraints = RigidbodyConstraints.FreezeAll;
+            //chillieSeedBag.constraints = RigidbodyConstraints.FreezeAll;
         }   
+
+        public void PickDown()
+        {
+            chillieSeedBag.transform.parent = null;
+            chillieSeedBag.useGravity = true;
+        }
     }
 }
