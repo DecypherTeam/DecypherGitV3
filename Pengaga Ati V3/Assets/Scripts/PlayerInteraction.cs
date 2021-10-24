@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Examples
 {
-    public class PlayerInteraction : MonoBehaviour
+    /*public class PlayerInteraction : MonoBehaviour
     {
         Player player;
 
@@ -59,6 +59,6 @@ namespace Examples
             selectedLand = land;
             land.Select(true);
         }
-    }
+    }*/
 }
 

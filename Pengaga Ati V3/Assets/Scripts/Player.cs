@@ -26,7 +26,7 @@ namespace Examples
         public bool pickedItem;
 
 
-        // List of variable for all chickens
+        // List of variable for all chickens [START]
         public Rigidbody pickChic;
         public bool pickedChic;
         public Rigidbody pickChicSec;
@@ -35,6 +35,7 @@ namespace Examples
         public bool pickedChicThird;
         public Rigidbody pickChicFourth;
         public bool pickedChicFourth;
+        // [END]
 
         public bool playerShoot = false;
 
@@ -45,6 +46,8 @@ namespace Examples
         PlantInteraction plantInteraction;
 
         GrowingCrop growingCrop;
+
+        SeedCollider chillieSeedCollider;
 
         // Awake
         void Awake()
@@ -60,11 +63,15 @@ namespace Examples
         {
             animator = GetComponent<Animator>();
 
-            GameObject theSeed = GameObject.Find("Seed1");
+            GameObject theSeed = GameObject.Find("Seed Bag");
             plantInteraction = theSeed.GetComponent<PlantInteraction>();
 
             GameObject theCrop = GameObject.Find("Crops");
             growingCrop = theCrop.GetComponent<GrowingCrop>();
+
+            GameObject seedBag = GameObject.Find("Chillie Seed Bag");
+            chillieSeedCollider = seedBag.GetComponent<SeedCollider>();
+
         }
 
         // Update
@@ -87,19 +94,24 @@ namespace Examples
             // Assigning the pick up mechanics to the pick up button
             if( TCKInput.GetAction( "pickBtn", EActionEvent.Press))
             {   
-                if(growingCrop.harvestReadyToPick == true && growingCrop.playerHit == true)
+                /*if(growingCrop.harvestReadyToPick == true && growingCrop.playerHit == true)
                 {
                     growingCrop.PlayerPickCrop();
                     animator.SetBool("isPickup", true);
-                }
+                }*/
                
-                if (pickedItem == false)
+                /*if (pickedItem == false)
                 {
                     PickUp();
                     animator.SetBool("isPickup", true);
+                }*/
+
+                if (chillieSeedCollider.playerTouchSeed == true)
+                {
+                    chillieSeedCollider.PickUp();
                 }
 
-                // List of calling pick chicken up functions
+                // List of calling pick chicken up functions [START]
                 if (pickedChic == false)
                 {
                     PickChicUp();
@@ -133,12 +145,13 @@ namespace Examples
                     pickedChicSec = true;
                     pickedChicThird = true;
                 }
+                //[END]
             }
 
             // Assigning the item to drop when the button is not pressed
             if (TCKInput.GetAction("pickBtn", EActionEvent.Up))
             {
-                if (growingCrop.cropPickedUp == true)
+                /*if (growingCrop.cropPickedUp == true)
                 {
                     growingCrop.PlayerDropCrop();
                     animator.SetBool("isPickup", false);
@@ -148,7 +161,7 @@ namespace Examples
                 {
                     PickDown();
                     animator.SetBool("isPickup", false);
-                }
+                }*/
 
                 // List of calling pick chicken down functions
                 PickChicDown();

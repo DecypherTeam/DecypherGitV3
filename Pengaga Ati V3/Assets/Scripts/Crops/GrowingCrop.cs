@@ -35,7 +35,7 @@ namespace Examples
             harvestReadyToPick = false;
             cropPickedUp = false;
 
-            GameObject theSeed = GameObject.Find("Seed1");
+            GameObject theSeed = GameObject.Find("Seed Bag");
             plantInteraction = theSeed.GetComponent<PlantInteraction>();
         }
 
