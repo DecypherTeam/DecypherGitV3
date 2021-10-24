@@ -2837,6 +2837,75 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &689176015
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.062037
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0925593
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.264103
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000100, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145892104289000153, guid: 2461318a5501b5e49b1855b238dbf70a,
+        type: 3}
+      propertyPath: m_Name
+      value: Chillie Seed Bag
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2461318a5501b5e49b1855b238dbf70a, type: 3}
 --- !u!1001 &729643827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5969,86 +6038,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c1bfb9d1078e364cb3b0716e532470a,
     type: 3}
   m_PrefabInstance: {fileID: 1101309588}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1102723169
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.647358
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.0985079
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 23.33216
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339395923939676362, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5638278242647506985, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: pickUpDest
-      value: 
-      objectReference: {fileID: 1352676329}
-    - target: {fileID: 5684656489228022067, guid: 2461318a5501b5e49b1855b238dbf70a,
-        type: 3}
-      propertyPath: m_Name
-      value: Chillie Seed Bag
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2461318a5501b5e49b1855b238dbf70a, type: 3}
---- !u!1 &1128524724 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5684656489228022067, guid: 2461318a5501b5e49b1855b238dbf70a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1102723169}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1152748153
 GameObject:
@@ -12682,7 +12671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   select: {fileID: 843525446}
-  chillieSeedBag: {fileID: 1128524724}
+  chillieSeedBag: {fileID: 0}
   chilliePrefab: {fileID: 3361956409469570444, guid: 0b6d094fdc452ed4eba1003de506551b,
     type: 3}
 --- !u!1 &919132148358949013

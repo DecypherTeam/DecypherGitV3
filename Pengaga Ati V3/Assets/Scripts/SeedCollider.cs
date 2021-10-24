@@ -16,6 +16,9 @@ namespace Examples
         {
             GameObject thePlayer = GameObject.Find("Player");
             player = thePlayer.GetComponent<Player>();
+
+            GameObject theDestination = GameObject.Find("PickUpDestination");
+            pickUpDest = theDestination.GetComponent<Transform>();
         }
 
         public void OnTriggerStay(Collider other)
@@ -30,7 +33,7 @@ namespace Examples
         {
             if (other.tag == "Player")
             {
-                playerTouchSeed = true;
+                playerTouchSeed = false;
             }
         }
 
@@ -39,7 +42,7 @@ namespace Examples
             // Coding the pickable items to be carried
             chillieSeedBag.useGravity = false;
             chillieSeedBag.transform.position = pickUpDest.position;
-            chillieSeedBag.transform.parent = GameObject.Find("PickUpDestination").transform;
+            chillieSeedBag.transform.parent = pickUpDest.transform;
         }   
 
         public void PickDown()
