@@ -9,9 +9,8 @@ namespace Examples
     {
         PlantInteraction plantInteraction;
 
-        public GameObject crop;
-        public Rigidbody cropRb;
-        public bool cropVisible;
+        //public GameObject crop;
+        //public Rigidbody cropRb;
         public bool harvestReady;
         public bool harvestReadyToPick;
         public bool cropPickedUp;
@@ -25,34 +24,20 @@ namespace Examples
 
         public bool isMaxSize = false;
 
-        public Transform theDest;
+        //public Transform theDest;
 
         void Start()
         {
-            crop.gameObject.SetActive(false);
-            cropVisible = false;
             harvestReady = false;
             harvestReadyToPick = false;
             cropPickedUp = false;
-
-            GameObject theSeed = GameObject.Find("Seed Bag");
-            plantInteraction = theSeed.GetComponent<PlantInteraction>();
         }
 
         void FixedUpdate()
         {
             playerHit = false;
 
-            if (plantInteraction.land0 == true)
-            {
-                crop.gameObject.SetActive(true);
-                cropVisible = true;
-            }
-
-            if (cropVisible == true && isMaxSize == false)
-            {
-                StartCoroutine(Grow());
-            }
+            StartCoroutine(Grow());
 
             if (isMaxSize == true)
             {
@@ -91,26 +76,26 @@ namespace Examples
             }
         }
 
-        public void PlayerPickCrop()
+        /*public void PlayerPickCrop()
         {
             Debug.Log("Player Pick");
             cropRb.useGravity = false;
             cropRb.transform.position = theDest.position;
             cropRb.transform.parent = GameObject.Find("PickUpDestination").transform;
             cropPickedUp = true;
-        }
+        }*/
 
-        public void PlayerDropCrop()
+        /*public void PlayerDropCrop()
         {
             cropRb.transform.parent = null;
             cropRb.useGravity = true;
-        }
+        }*/
 
         public IEnumerator WaitBeforeDestroy()
         {
             yield return new WaitForSeconds(3);
             Destroy(this);
-            Destroy(crop);
+            //Destroy(crop);
             cropDestroyed = true;
             /*Debug.Log("Destroy gameObject");*/
         }

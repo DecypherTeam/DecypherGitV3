@@ -30,7 +30,7 @@ namespace Examples
         {
             if (other.tag == "Player")
             {
-                playerTouchSeed = false;
+                playerTouchSeed = true;
             }
         }
 

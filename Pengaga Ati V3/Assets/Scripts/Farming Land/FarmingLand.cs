@@ -8,7 +8,8 @@ namespace Examples
     {
         public GameObject select;
         
-        public GameObject chillieGameObject;
+        public GameObject chillieSeedBag;
+        public GameObject chilliePrefab; 
 
         void OnTriggerStay(Collider other)
         {
@@ -30,7 +31,8 @@ namespace Examples
             if (other.tag == "Chillie SeedBag")
             {
                 Debug.Log("Chillie");
-                Destroy(chillieGameObject);
+                Destroy(chillieSeedBag);
+                Instantiate(chilliePrefab, transform.position, transform.rotation);
             }
         }
     }
