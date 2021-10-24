@@ -7,7 +7,8 @@ namespace Examples
     public class FarmingLand : MonoBehaviour
     {
         public GameObject select;
-        public bool chillie;
+        
+        public GameObject chillieGameObject;
 
         void OnTriggerStay(Collider other)
         {
@@ -29,7 +30,7 @@ namespace Examples
             if (other.tag == "Chillie SeedBag")
             {
                 Debug.Log("Chillie");
-                chillie = true;
+                Destroy(chillieGameObject);
             }
         }
     }

@@ -75,13 +75,14 @@ namespace Examples
             // Assigning the pick up mechanics to the pick up button
             if( TCKInput.GetAction( "pickBtn", EActionEvent.Press))
             {   
-                // List of calling pick seed bags functions 
-                if(seedCollider.playerTouchSeed == true)
+                // List of calling pick seed bags functions [START]
+                if(seedCollider.playerTouchSeed == true && seedCollider.chillieSeedBag != null)
                 {
-                    Debug.Log("Player touch seed bag");
                     seedCollider.PickUp();
                     animator.SetBool("isPickup", true);
                 }
+                // [END]
+
 
                 // List of calling pick chicken up functions [START]
                 if (pickedChic == false)
@@ -123,7 +124,12 @@ namespace Examples
             // Assigning the item to drop when the button is not pressed
             if (TCKInput.GetAction("pickBtn", EActionEvent.Up))
             {
-                seedCollider.PickDown();
+                // List of calling drop seed bags functions [START]
+                if (seedCollider.chillieSeedBag != null)
+                {
+                    seedCollider.PickDown();
+                }
+                // [END]
 
                 // List of calling pick chicken down functions
                 PickChicDown();

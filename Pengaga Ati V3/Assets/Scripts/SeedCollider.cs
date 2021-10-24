@@ -22,8 +22,15 @@ namespace Examples
         {
             if (other.tag == "Player")
             {
-                //Debug.Log("Player Pick");
                 playerTouchSeed = true;
+            }
+        }
+
+        public void OnTriggerExit(Collider other)
+        {
+            if (other.tag == "Player")
+            {
+                playerTouchSeed = false;
             }
         }
 
@@ -33,7 +40,6 @@ namespace Examples
             chillieSeedBag.useGravity = false;
             chillieSeedBag.transform.position = pickUpDest.position;
             chillieSeedBag.transform.parent = GameObject.Find("PickUpDestination").transform;
-            //chillieSeedBag.constraints = RigidbodyConstraints.FreezeAll;
         }   
 
         public void PickDown()
