@@ -10,11 +10,31 @@ public class Growth : MonoBehaviour
 
     public bool isMaxSize = false;
 
+    public bool harvestReady;
+    public bool harvestReadyToPick;
+    public GameObject crop;
+    public Rigidbody cropRb;
+    public Transform theDest;
+
     void Start()
     {
-        if(isMaxSize == false)
+        harvestReady = false;
+        harvestReadyToPick = false;
+
+        GameObject theDestination = GameObject.Find("PickUpDestination");
+        theDest = theDestination.GetComponent<Transform>();
+
+        if (isMaxSize == false)
         {
             StartCoroutine(Grow());
+        }
+    }
+
+    void Update()
+    {
+        if(isMaxSize == true)
+        {
+            harvestReady = true;
         }
     }
 
@@ -33,4 +53,20 @@ public class Growth : MonoBehaviour
 
         isMaxSize = true;
     }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player" && harvestReady == true)
+        {
+            Debug.Log("Player hit");
+            harvestReadyToPick = true;
+        }
+    }
+
+    /*public void PlayerPickUp()
+    {
+        cropRb.useGravity = false;
+        cropRb.transform.position = theDest.position;
+        cropRb.transform.parent = theDest.transform;
+    }*/
 }

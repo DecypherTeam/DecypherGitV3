@@ -42,6 +42,8 @@ namespace Examples
 
         SeedCollider seedCollider;
 
+        Growth growth;
+
         // Awake
         void Awake()
         {
@@ -56,6 +58,11 @@ namespace Examples
 
             GameObject seedcollider = GameObject.Find("Chillie Collider");
             seedCollider = seedcollider.GetComponent<SeedCollider>();
+
+//-------------------------------------------------------------- Needs Attention --------------------------------------------------------
+            /*GameObject crop = GameObject.Find("Chillie Crop");
+            growth = crop.GetComponent<Growth>();*/
+//-----------------------------------------------------------------------------------------------------------------------------------------
         }
 
         // Update
@@ -83,6 +90,12 @@ namespace Examples
                 }
                 // [END]
 
+ //-------------------------------------------------------------- Needs Attention --------------------------------------------------------
+                /*if(growth.harvestReadyToPick == true)
+                {
+                    growth.PlayerPickUp();
+                }*/
+ //-----------------------------------------------------------------------------------------------------------------------------------------
 
                 // List of calling pick chicken up functions [START]
                 if (pickedChic == false)
@@ -264,32 +277,6 @@ namespace Examples
             rBody.AddForce( camTransform.forward * range, ForceMode.Impulse );
             Destroy( primitive, 0.5f );
         }
-
-        // PlayerPickUp
-        /*private void OnControllerColliderHit(ControllerColliderHit hit)
-        {
-            // When players get close to items with tag "PickUp"
-            if (hit.gameObject.tag.Equals("PickUp"))
-            {
-                pickedItem = false;
-            }
-            else
-            {
-                pickedItem = true;
-            }
-        }*/
-
-        private void PickUp()
-        {
-            
-        }
-
-        private void PickDown()
-        {
-            
-        }
-
-
 
         // Lists of functions handling all chicken functions
         // Function for chicken number 1 [START]
