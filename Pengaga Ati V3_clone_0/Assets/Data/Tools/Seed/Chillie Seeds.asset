@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11cd925b30c9574d970600d6416c816, type: 3}
+  m_Name: Chillie Seeds
+  m_EditorClassIdentifier: 
+  description: Seeds to grow chillies
+  thumbnail: {fileID: 0}
+  gameModel: {fileID: 0}
+  daysToGrow: 0
+  cropToYield: {fileID: 11400000, guid: 72567cbf2f5c8da488eda8d7726464f9, type: 2}
