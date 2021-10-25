@@ -10,7 +10,7 @@ namespace Examples
         PlantInteraction plantInteraction;
 
         //public GameObject crop;
-        //public Rigidbody cropRb;
+        public Rigidbody cropRb;
         public bool harvestReady;
         public bool harvestReadyToPick;
         public bool cropPickedUp;
@@ -24,13 +24,16 @@ namespace Examples
 
         public bool isMaxSize = false;
 
-        //public Transform theDest;
+        public Transform theDest;
 
         void Start()
         {
             harvestReady = false;
             harvestReadyToPick = false;
             cropPickedUp = false;
+
+            GameObject theDestination = GameObject.Find("PickUpDestination");
+            theDest = theDestination.GetComponent<Transform>();
         }
 
         void FixedUpdate()
@@ -74,6 +77,12 @@ namespace Examples
                 Debug.Log("Player touch");
                 harvestReadyToPick = true;
             }
+        }
+
+        public void Player()
+        {
+            cropRb.transform.position = theDest.position;
+            cropRb.transform.parent = theDest.transform;
         }
 
         /*public void PlayerPickCrop()

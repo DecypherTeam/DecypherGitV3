@@ -31,7 +31,7 @@ namespace Examples
             if (other.tag == "Chillie SeedBag")
             {
                 Debug.Log("Chillie");
-                Destroy(chillieSeedBag);
+                //Destroy(chillieSeedBag);
                 Instantiate(chilliePrefab, transform.position, transform.rotation);
             }
         }
