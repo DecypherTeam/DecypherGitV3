@@ -91,7 +91,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9145892102851744622}
   - component: {fileID: 9145892102851744620}
-  - component: {fileID: 9145892102851744623}
   m_Layer: 0
   m_Name: Chillie Collider
   m_TagString: Untagged
@@ -128,21 +127,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.526411, y: 1.6836505, z: 1.6556263}
   m_Center: {x: 0.03601837, y: 0.8191714, z: 0.028136253}
---- !u!114 &9145892102851744623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892102851744609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c5ffc0dba1c244c820cbd28732f4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chillieSeedBag: {fileID: 9145892104289000102}
-  pickUpDest: {fileID: 0}
-  playerTouchSeed: 0
 --- !u!1 &9145892103316604219
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +219,8 @@ GameObject:
   - component: {fileID: 9145892104289000100}
   - component: {fileID: 9145892104289000103}
   - component: {fileID: 9145892104289000102}
+  - component: {fileID: 60035229846233336}
+  - component: {fileID: -8211348548676036967}
   m_Layer: 0
   m_Name: Chillie Seed Bag
   m_TagString: Chillie SeedBag
@@ -286,3 +272,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &60035229846233336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145892104289000153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b724bdacdc24be14a80523880fc1bf09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  pickUpDest: {fileID: 0}
+--- !u!135 &-8211348548676036967
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145892104289000153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

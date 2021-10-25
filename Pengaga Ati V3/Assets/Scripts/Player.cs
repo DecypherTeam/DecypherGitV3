@@ -44,6 +44,8 @@ namespace Examples
 
         Growth growth;
 
+        ObjectPickUp objectpickup;
+
         // Awake
         void Awake()
         {
@@ -59,10 +61,10 @@ namespace Examples
             GameObject seedcollider = GameObject.Find("Chillie Collider");
             seedCollider = seedcollider.GetComponent<SeedCollider>();
 
-//-------------------------------------------------------------- Needs Attention --------------------------------------------------------
+            //-------------------------------------------------------------- Needs Attention --------------------------------------------------------
             /*GameObject crop = GameObject.Find("Chillie Crop");
             growth = crop.GetComponent<Growth>();*/
-//-----------------------------------------------------------------------------------------------------------------------------------------
+            //-----------------------------------------------------------------------------------------------------------------------------------------
         }
 
         // Update
@@ -81,21 +83,23 @@ namespace Examples
 
             // Assigning the pick up mechanics to the pick up button
             if( TCKInput.GetAction( "pickBtn", EActionEvent.Press))
-            {   
+            {
                 // List of calling pick seed bags functions [START]
-                if(seedCollider.playerTouchSeed == true && seedCollider.chillieSeedBag != null)
-                {
-                    seedCollider.PickUp();
-                    animator.SetBool("isPickup", true);
-                }
+                /* if(seedCollider.playerTouchSeed == true && seedCollider.chillieSeedBag != null)
+                 {
+                     seedCollider.PickUp();
+                     animator.SetBool("isPickup", true);
+                 } */
+
+            
                 // [END]
 
- //-------------------------------------------------------------- Needs Attention --------------------------------------------------------
+                //-------------------------------------------------------------- Needs Attention --------------------------------------------------------
                 /*if(growth.harvestReadyToPick == true)
                 {
                     growth.PlayerPickUp();
                 }*/
- //-----------------------------------------------------------------------------------------------------------------------------------------
+                //-----------------------------------------------------------------------------------------------------------------------------------------
 
                 // List of calling pick chicken up functions [START]
                 if (pickedChic == false)
@@ -138,10 +142,10 @@ namespace Examples
             if (TCKInput.GetAction("pickBtn", EActionEvent.Up))
             {
                 // List of calling drop seed bags functions [START]
-                if (seedCollider.chillieSeedBag != null)
+               /* if (seedCollider.chillieSeedBag != null)
                 {
                     seedCollider.PickDown();
-                }
+                } */
                 // [END]
 
                 // List of calling pick chicken down functions
