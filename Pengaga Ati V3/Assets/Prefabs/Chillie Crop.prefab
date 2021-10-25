@@ -80,6 +80,7 @@ MonoBehaviour:
   maxSize: 1
   isMaxSize: 0
   harvestReady: 0
+  harvestReadyToPick: 0
   crop: {fileID: 3361956409469570444}
   cropRb: {fileID: 3361956409469570482}
   theDest: {fileID: 0}

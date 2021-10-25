@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9145892102751331833
+--- !u!1 &5092965852684328666
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9145892102751331782}
-  - component: {fileID: 9145892102751331780}
-  - component: {fileID: 9145892102751331783}
+  - component: {fileID: 5092965852684328667}
+  - component: {fileID: 5092965852684328645}
+  - component: {fileID: 5092965852684328644}
   m_Layer: 0
   m_Name: polySurface3
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9145892102751331782
+--- !u!4 &5092965852684328667
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892102751331833}
+  m_GameObject: {fileID: 5092965852684328666}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.09032565, y: 1.0345454, z: -0.06472949}
   m_LocalScale: {x: 0.7156815, y: 0.7156815, z: 0.7156815}
   m_Children: []
-  m_Father: {fileID: 9145892102851744622}
+  m_Father: {fileID: 5092965853675409728}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9145892102751331780
+--- !u!33 &5092965852684328645
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892102751331833}
+  m_GameObject: {fileID: 5092965852684328666}
   m_Mesh: {fileID: 4164511204261677510, guid: 8b1fd2712d2d1094bbcbde589e91053c, type: 3}
---- !u!23 &9145892102751331783
+--- !u!23 &5092965852684328644
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892102751331833}
+  m_GameObject: {fileID: 5092965852684328666}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -81,7 +81,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &9145892102851744609
+--- !u!1 &5092965853145511799
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,71 +89,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9145892102851744622}
-  - component: {fileID: 9145892102851744620}
-  - component: {fileID: 9145892102851744623}
-  m_Layer: 0
-  m_Name: Chillie Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9145892102851744622
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892102851744609}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 9145892102751331782}
-  - {fileID: 9145892103316604216}
-  m_Father: {fileID: 9145892104289000100}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &9145892102851744620
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892102851744609}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.526411, y: 1.6836505, z: 1.6556263}
-  m_Center: {x: 0.03601837, y: 0.8191714, z: 0.028136253}
---- !u!114 &9145892102851744623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892102851744609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c5ffc0dba1c244c820cbd28732f4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chillieSeedBag: {fileID: 9145892104289000102}
-  pickUpDest: {fileID: 0}
-  playerTouchSeed: 0
---- !u!1 &9145892103316604219
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9145892103316604216}
-  - component: {fileID: 9145892103316604166}
-  - component: {fileID: 9145892103316604217}
+  - component: {fileID: 5092965853145511792}
+  - component: {fileID: 5092965853145511794}
+  - component: {fileID: 5092965853145511793}
   m_Layer: 0
   m_Name: pSphere1
   m_TagString: Untagged
@@ -161,35 +99,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9145892103316604216
+--- !u!4 &5092965853145511792
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892103316604219}
+  m_GameObject: {fileID: 5092965853145511799}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.74000543, z: 0}
   m_LocalScale: {x: 0.86696005, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 9145892102851744622}
+  m_Father: {fileID: 5092965853675409728}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9145892103316604166
+--- !u!33 &5092965853145511794
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892103316604219}
+  m_GameObject: {fileID: 5092965853145511799}
   m_Mesh: {fileID: 2540817853737639666, guid: 8b1fd2712d2d1094bbcbde589e91053c, type: 3}
---- !u!23 &9145892103316604217
+--- !u!23 &5092965853145511793
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892103316604219}
+  m_GameObject: {fileID: 5092965853145511799}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -224,7 +162,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &9145892104289000153
+--- !u!1 &5092965853675409735
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,51 +170,97 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9145892104289000100}
-  - component: {fileID: 9145892104289000103}
-  - component: {fileID: 9145892104289000102}
+  - component: {fileID: 5092965853675409728}
+  - component: {fileID: 5092965853675409730}
   m_Layer: 0
-  m_Name: Chillie Seed Bag
-  m_TagString: Chillie SeedBag
+  m_Name: Chillie Collider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9145892104289000100
+--- !u!4 &5092965853675409728
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892104289000153}
+  m_GameObject: {fileID: 5092965853675409735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.570507, y: 1.0915856, z: 22.654652}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9145892102851744622}
-  m_Father: {fileID: 0}
+  - {fileID: 5092965852684328667}
+  - {fileID: 5092965853145511792}
+  m_Father: {fileID: 5092965854155406186}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &9145892104289000103
+--- !u!65 &5092965853675409730
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892104289000153}
+  m_GameObject: {fileID: 5092965853675409735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.526411, y: 1.6836505, z: 1.6556263}
+  m_Center: {x: 0.03601837, y: 0.8191714, z: 0.028136253}
+--- !u!1 &5092965854155406191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5092965854155406186}
+  - component: {fileID: 5092965854155406185}
+  - component: {fileID: 5092965854155406184}
+  m_Layer: 0
+  m_Name: Chillie Seed Bag
+  m_TagString: PickUp
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5092965854155406186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5092965854155406191}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.062037, y: 1.0925593, z: 22.264103}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5092965853675409728}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5092965854155406185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5092965854155406191}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1.1569073, z: 1}
   m_Center: {x: 0, y: 0.81245124, z: 0}
---- !u!54 &9145892104289000102
+--- !u!54 &5092965854155406184
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9145892104289000153}
+  m_GameObject: {fileID: 5092965854155406191}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0

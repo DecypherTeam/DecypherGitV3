@@ -44,6 +44,8 @@ namespace Examples
 
         Growth growth;
 
+        ObjectPickUp objectpickup;
+
         // Awake
         void Awake()
         {
@@ -56,8 +58,11 @@ namespace Examples
         {
             animator = GetComponent<Animator>();
 
-            GameObject seedcollider = GameObject.Find("Chillie Collider");
-            seedCollider = seedcollider.GetComponent<SeedCollider>();
+            //GameObject seedcollider = GameObject.Find("Chillie Collider");
+            //seedCollider = seedcollider.GetComponent<SeedCollider>();
+
+            GameObject seedbag = GameObject.Find("Chillie Seed Bag");
+            objectpickup = seedbag.GetComponent<ObjectPickUp>();
 
 //-------------------------------------------------------------- Needs Attention --------------------------------------------------------
             /*GameObject crop = GameObject.Find("Chillie Crop");
@@ -83,12 +88,19 @@ namespace Examples
             if( TCKInput.GetAction( "pickBtn", EActionEvent.Press))
             {   
                 // List of calling pick seed bags functions [START]
-                if(seedCollider.playerTouchSeed == true && seedCollider.chillieSeedBag != null)
+               /* if(seedCollider.playerTouchSeed == true && seedCollider.chillieSeedBag != null)
                 {
                     seedCollider.PickUp();
                     animator.SetBool("isPickup", true);
-                }
+                } */
                 // [END]
+
+                if(objectpickup.isPickUp == true)
+                {
+                    objectpickup.Pickupseedbag();
+                    //Debug.Log("Player test seedbag");
+                    animator.SetBool("isPickup", true);
+                }
 
  //-------------------------------------------------------------- Needs Attention --------------------------------------------------------
                 /*if(growth.harvestReadyToPick == true)
