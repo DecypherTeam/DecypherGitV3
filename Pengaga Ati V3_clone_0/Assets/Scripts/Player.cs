@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using TouchControlsKit;
-//I'm testing this Ryan asked me to.. :D
+
 namespace Examples
 {
     public class Player : MonoBehaviour

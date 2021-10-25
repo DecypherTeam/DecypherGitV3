@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 namespace Examples
 {
+    // testing for github
     public class EnemyController : MonoBehaviour
     {
         [SerializeField] float stoppingDistance;
