@@ -3,63 +3,76 @@ using System.Collections.Generic;
 using TouchControlsKit;
 using UnityEngine;
 
-public class ObjectPickUp : MonoBehaviour
+namespace Examples
 {
-    public GameObject player;
-    public Transform pickUpDest;
-    public Rigidbody pickupitem;
-
-    private SphereCollider sc = new SphereCollider();
-    private Animator anim = new Animator();
-    private bool isPickUp;
-
-    void Start()
+    public class ObjectPickUp : MonoBehaviour
     {
-        sc = gameObject.GetComponent<SphereCollider>();
-        anim = player.GetComponent<Animator>();
-        sc.radius = 2.5f;
-        isPickUp = false;
-    }
+        public GameObject player;
+        public Transform pickUpDest;
+        public Rigidbody pickupitem;
 
-    private void Update()
-    {
-        if (TCKInput.GetAction("pickBtn", EActionEvent.Press))
+        private SphereCollider sc = new SphereCollider();
+        private Animator anim = new Animator();
+        public bool isPickUp;
+
+        void Start()
         {
+            // Get components inside the script so we won't have to manually place them in inside the inspector [START]
+            player = GameObject.Find("Player");
 
-            if (isPickUp)
+            GameObject theDestination = GameObject.Find("PickUpDestination");
+            pickUpDest = theDestination.GetComponent<Transform>();
+
+            pickupitem = GetComponent<Rigidbody>();
+            // [END]
+
+            sc = gameObject.GetComponent<SphereCollider>();
+            anim = player.GetComponent<Animator>();
+            sc.radius = 2.5f;
+            isPickUp = false;
+        }
+
+        private void Update()
+        {
+            if (TCKInput.GetAction("pickBtn", EActionEvent.Press))
             {
-                anim.SetBool("isPickup", true);
-                transform.position = pickUpDest.position;
-                pickupitem.useGravity = false;
-                pickupitem.transform.parent = pickUpDest.transform;
-                pickupitem.constraints = RigidbodyConstraints.FreezeAll;
+                if (isPickUp)
+                {
+                    anim.SetBool("isPickup", true);
+                    transform.position = pickUpDest.position;
+                    pickupitem.useGravity = false;
+                    pickupitem.transform.parent = pickUpDest.transform;
+                    pickupitem.constraints = RigidbodyConstraints.FreezeAll;
+                }
+            }
+
+            if (TCKInput.GetAction("pickBtn", EActionEvent.Up))
+            {
+                pickupitem.constraints = RigidbodyConstraints.None;
+                anim.SetBool("isPickup", false);
+                pickupitem.useGravity = true;
+                pickupitem.transform.parent = null;
             }
         }
 
-        if (TCKInput.GetAction("pickBtn", EActionEvent.Up))
+        private void OnTriggerStay(Collider other)
         {
-            pickupitem.constraints = RigidbodyConstraints.None;
-            anim.SetBool("isPickup", false);
-            pickupitem.useGravity = true;
-            pickupitem.transform.parent = null;
+            togglePickUp(other);
         }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        togglePickUp(other);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        togglePickUp(other);
-    }
-
-    private void togglePickUp(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
+        private void OnTriggerExit(Collider other)
         {
-            isPickUp = !isPickUp;
+            /*togglePickUp(other);*/
+            isPickUp = false;
+        }
+
+        private void togglePickUp(Collider other)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                isPickUp = true;
+            }
         }
     }
 }
+
