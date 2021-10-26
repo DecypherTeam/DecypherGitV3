@@ -11,7 +11,7 @@ public class ObjectPickUp : MonoBehaviour
 
     private SphereCollider sc = new SphereCollider();
     private Animator anim = new Animator();
-    public bool isPickUp;
+    private bool isPickUp;
 
     void Start()
     {
@@ -25,6 +25,7 @@ public class ObjectPickUp : MonoBehaviour
     {
         if (TCKInput.GetAction("pickBtn", EActionEvent.Press))
         {
+
             if (isPickUp)
             {
                 anim.SetBool("isPickup", true);
@@ -44,22 +45,21 @@ public class ObjectPickUp : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         togglePickUp(other);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        /*togglePickUp(other);*/
-        isPickUp = false;
+        togglePickUp(other);
     }
 
     private void togglePickUp(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            isPickUp = true;
+            isPickUp = !isPickUp;
         }
     }
 }
